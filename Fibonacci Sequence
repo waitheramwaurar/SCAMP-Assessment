@@ -1,0 +1,21 @@
+function Fibonacci(terms){
+var mySequence = [];
+
+if (terms === 1){
+mySequence = [0];
+} 
+else if (terms === 2){
+mySequence = [0, 1];
+}
+else {
+mySequence = [0,1];
+
+for (i = 2; i < terms; i++){
+ mySequence.push(mySequence[mySequence.length - 2] + mySequence[mySequence.length - 1]);
+}
+}
+return mySequence;
+};
+
+//Call the function with the number of terms you want in the sequence
+Fibbonacci(10); // Output should be [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
